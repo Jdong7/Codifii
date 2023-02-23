@@ -1,0 +1,94 @@
+@import "../../mixins.scss";
+.topbar-wrapper {
+  display: flex;
+  height: 100px;
+  padding: 10px 250px 10px 250px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  @include md {
+    padding: 10px 150px 10px 150px;
+  }
+  @include sm-down {
+    padding: 10px 50px 10px 50px;
+  }
+}
+.codifii-text {
+  color: $oranged;
+  display: flex;
+  font-family: "Martel";
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 0.05em;
+  @include md {
+    font-size: 26px;
+  }
+  @include sm-down {
+    font-size: 18px;
+  }
+}
+.logo-wrapper {
+  display: flex;
+  //width: 200px;
+  align-items: center;
+  padding: 10px;
+   @include md {
+    //width: 100px;
+  }
+  @include sm-down {
+   // width: 100px;
+  }
+}
+.icon-size {
+  padding-top: 10px;
+  color: $oranged;
+  font-size: 50px;
+  @include md {
+    font-size: 30px;
+  }
+  @include sm-down {
+    font-size: 22px;
+    padding-top: 5px;
+  }
+}
+.signin-text {
+  position: relative;
+  //margin: 5px;
+  padding-top: 5px;
+  display: flex;
+  font-family: "Martel Sans", sans-serif;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  align-items: center;
+  /* identical to box height */
+  cursor: pointer;
+  user-select: none;
+  letter-spacing: 0.05em;
+  color: $oranged;
+  @include md {
+    font-size: 26px;
+  }
+  @include sm-down{
+    font-size: 18px;
+  }
+}
+.signin-text::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: $oranged;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.signin-text:hover::after {
+  transform: scaleX(1);
+  height: 2px;
+  transform-origin: bottom left;
+}

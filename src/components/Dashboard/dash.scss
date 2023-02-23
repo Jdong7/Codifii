@@ -1,0 +1,86 @@
+@import "../../mixins.scss";
+
+* {
+  //border: 1px solid red;
+}
+.dash-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px 50px 100px;
+  @include md {
+  }
+  @include sm-down {
+  }
+}
+.dash-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+.dash-logo-container {
+  display: flex;
+  align-items: center;
+  color: $oranged;
+  display: flex;
+  font-family: "Martel";
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 0.05em;
+}
+.dash-icon {
+  padding-top: 10px;
+  color: $oranged;
+  font-size: 50px;
+}
+.dash-mode {
+  display: flex;
+  align-items: center;
+  color: $oranged;
+  display: flex;
+  font-family: "Martel Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: 0.02em;
+}
+.dash-content-line {
+  display: flex;
+  align-items: center;
+  color: $Licorice;
+  display: flex;
+  font-family: "Martel Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  letter-spacing: 0.02em;
+  margin-top: 20px;
+}
+.dash-highlight {
+  color: $purple;
+  padding-left: 10px;
+}
+.dash-todo-container{
+    display: flex;
+    flex-grow: 1;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    
+}
+.dash-uncompleted{
+    width: 400px;
+    border-radius: 8px;
+}
+.dash-completed{
+    width: 400px;
+    margin-left: auto;
+    border-radius: 8px;
+}
+.border-8{
+border-radius: 8px;
+border: 1px solid $Licorice;
+}
